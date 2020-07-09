@@ -40,4 +40,28 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
-.
+logo.alt = 'great idea logo'
+
+const ctaLogo = document.getElementById('cta-img')
+ctaLogo.setAttribute('src', siteContent["cta"]["img-src"])
+ctaLogo.alt ='Image of a code snippet'
+
+const navArray = document.querySelectorAll("nav a");
+navArray[0].textContent = siteContent["nav"]["nav-item-1"];
+navArray[1].textContent = siteContent["nav"]["nav-item-2"];
+navArray[2].textContent = siteContent["nav"]["nav-item-3"];
+navArray[3].textContent = siteContent["nav"]["nav-item-4"];
+navArray[4].textContent = siteContent["nav"]["nav-item-5"];
+navArray[5].textContent = siteContent["nav"]["nav-item-6"];
+
+navArray.forEach(element =>{
+  element.style.color ='green'
+})
+
+const ctaText = document.querySelector(".cta-text h1").innerHTML = "DOM <br> Is <br> Awesome";
+
+const ctaBttn = document.querySelector(".cta-text button").innerHTML ="Get Started"
+
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+middleImg.alt='Image of code snippets across the screen'
