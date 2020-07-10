@@ -65,3 +65,43 @@ const ctaBttn = document.querySelector(".cta-text button").innerHTML ="Get Start
 const middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 middleImg.alt='Image of code snippets across the screen'
+
+const mainContent = document.querySelectorAll("h4");
+mainContent[0].textContent = siteContent["main-content"]["features-h4"]
+mainContent[1].textContent = siteContent["main-content"]["about-h4"]
+mainContent[2].textContent = siteContent["main-content"]["services-h4"]
+mainContent[3].textContent = siteContent["main-content"]["product-h4"]
+mainContent[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const mainContentP = document.querySelectorAll(".top-content p");
+mainContentP[0].textContent = siteContent["main-content"]["features-content"]
+mainContentP[1].textContent = siteContent["main-content"]["about-content"]
+
+const mainContentPS = document.querySelectorAll(".bottom-content p");
+mainContentPS[0].textContent = siteContent["main-content"]["services-content"];
+mainContentPS[1].textContent = siteContent["main-content"]["product-content"];
+mainContentPS[2].textContent = siteContent["main-content"]["vision-content"];
+
+const contactContent = document.querySelectorAll(".contact h4")
+contactContent[0].textContent = siteContent["contact"]["contact-h4"];
+
+const contactContentP = document.querySelectorAll(".contact p")
+contactContentP[0].textContent = siteContent["contact"]["address"]
+contactContentP[1].textContent = siteContent["contact"]["phone"];
+contactContentP[2].textContent = siteContent["contact"]["email"];
+
+const footerContent = document.querySelectorAll("footer p");
+footerContent[0].textContent = siteContent["footer"]["copyright"]
+
+const newListItem = document.createElement('a');
+newListItem.textContent = "Community"
+
+const parentElement = document.querySelector('nav');
+parentElement.append(newListItem) 
+
+const newListItemTwo = document.createElement('a');
+newListItemTwo.textContent = "Home"
+parentElement.prepend(newListItemTwo)
+
+newListItem.setAttribute("style", "color:green")
+newListItemTwo.setAttribute("style", "color:green")
